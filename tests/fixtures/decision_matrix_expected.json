@@ -1,0 +1,7400 @@
+[
+ {
+  "id": "completed_base_eligible",
+  "why": "R1 expired+30000 -> completed_30s; R3 min=max=12; R4 all hold; R7 age 70 men threshold 12 (CDC 70-74 <12) -> 12 not below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "completed_observed_over_30000",
+  "why": "R1 observedMs >= 30000 (30250) with reason expired is completed_30s",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30250
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "expired_short_window",
+  "why": "AMBIGUOUS: spec gives no completion label for expired+short window; chose 'incomplete' | R1 reason expired but observedMs 29999 < 30000 -> not completed; R2 value null",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 29999
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "incomplete",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "30"
+   ]
+  }
+ },
+ {
+  "id": "stopped_early",
+  "why": "R1 reason stopped -> stopped_early; R2 value null, not a completed 30-second test",
+  "session": {
+   "result": {
+    "reason": "stopped",
+    "status": "stopped",
+    "window": {
+     "observedMs": 21000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "stopped_early",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "30"
+   ]
+  }
+ },
+ {
+  "id": "stopped_after_full_window",
+  "why": "R1 completed_30s requires reason=='expired'; stopped at observedMs 30000 is still stopped_early",
+  "session": {
+   "result": {
+    "reason": "stopped",
+    "status": "stopped",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "stopped_early",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "30"
+   ]
+  }
+ },
+ {
+  "id": "stream_end_incomplete",
+  "why": "R1 reason stream_end -> incomplete; R2 value null",
+  "session": {
+   "result": {
+    "reason": "stream_end",
+    "status": "incomplete",
+    "window": {
+     "observedMs": 18000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "incomplete",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "30"
+   ]
+  }
+ },
+ {
+  "id": "page_hidden_interrupted",
+  "why": "R1 reason page_hidden -> interrupted; R2 value null",
+  "session": {
+   "result": {
+    "reason": "page_hidden",
+    "status": "incomplete",
+    "window": {
+     "observedMs": 14000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "interrupted",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "30"
+   ]
+  }
+ },
+ {
+  "id": "camera_error_interrupted",
+  "why": "R1 reason camera_error -> interrupted; R2 value null",
+  "session": {
+   "result": {
+    "reason": "camera_error",
+    "status": "incomplete",
+    "window": {
+     "observedMs": 6000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "interrupted",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "30"
+   ]
+  }
+ },
+ {
+  "id": "arms_yes_expired",
+  "why": "R1 arm-use override (CDC 'If the patient must use his/her arms to stand, stop the test. Record 0'): value 0; R7 eligible; 0 < 12 -> below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "yes",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "protocol_stop_arms",
+   "value": 0,
+   "referenceEligible": true,
+   "category": "below_average"
+  }
+ },
+ {
+  "id": "arms_yes_stopped",
+  "why": "R1 arms yes overrides reason stopped -> protocol_stop_arms value 0; R7 eligible",
+  "session": {
+   "result": {
+    "reason": "stopped",
+    "status": "stopped",
+    "window": {
+     "observedMs": 7000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "yes",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "protocol_stop_arms",
+   "value": 0,
+   "referenceEligible": true,
+   "category": "below_average"
+  }
+ },
+ {
+  "id": "arms_yes_stream_end_manual_and_no_evidence",
+  "why": "R1 arms yes overrides stream_end; R5 manual only for completed_30s so ignored; R4 evidence gates apply to automatic count only, not the protocol zero",
+  "session": {
+   "result": {
+    "reason": "stream_end",
+    "status": "incomplete",
+    "window": {
+     "observedMs": 9000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "yes",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "12",
+    "reason": "counted by supervisor"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "protocol_stop_arms",
+   "value": 0,
+   "referenceEligible": true,
+   "category": "below_average"
+  }
+ },
+ {
+  "id": "arms_yes_page_hidden",
+  "why": "R1 arms yes overrides page_hidden -> protocol zero, eligible",
+  "session": {
+   "result": {
+    "reason": "page_hidden",
+    "status": "incomplete",
+    "window": {
+     "observedMs": 11000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "yes",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "protocol_stop_arms",
+   "value": 0,
+   "referenceEligible": true,
+   "category": "below_average"
+  }
+ },
+ {
+  "id": "arms_yes_camera_error_women_92",
+  "why": "R1 arms yes overrides camera_error; R7 age 92 women threshold 4 (CDC 90-94 <4), 0 < 4 -> below",
+  "session": {
+   "result": {
+    "reason": "camera_error",
+    "status": "incomplete",
+    "window": {
+     "observedMs": 5000
+    },
+    "events": [],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "yes",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "92",
+    "column": "women"
+   }
+  },
+  "expect": {
+   "completion": "protocol_stop_arms",
+   "value": 0,
+   "referenceEligible": true,
+   "category": "below_average"
+  }
+ },
+ {
+  "id": "arms_yes_replay",
+  "why": "R1 protocol zero still value 0, but R7 source must be camera: replays never compared",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "replay",
+   "observer": {
+    "arms": "yes",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "protocol_stop_arms",
+   "value": 0,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "replay"
+   ]
+  }
+ },
+ {
+  "id": "arms_yes_setup_no",
+  "why": "R1 protocol zero value 0; R7 requires observer.setup=='yes'",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "yes",
+    "setup": "no"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "protocol_stop_arms",
+   "value": 0,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "setup"
+   ]
+  }
+ },
+ {
+  "id": "needs_review_all_flags_ok",
+  "why": "R4 every session review flag has flagChecks 'ok' + evidence + identity + min=max -> automatic usable; status needs_review is not itself a gate",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "needs_review",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [
+     "low_light",
+     "partial_occlusion"
+    ],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {
+     "low_light": "ok",
+     "partial_occlusion": "ok"
+    }
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "needs_review_flag_problem",
+  "why": "AMBIGUOUS: value null (not 12) when R4 fails | R4 a review flag checked 'problem' -> automatic not usable; no manual -> no value",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "needs_review",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [
+     "low_light",
+     "partial_occlusion"
+    ],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {
+     "low_light": "ok",
+     "partial_occlusion": "problem"
+    }
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "needs_review_flag_check_missing",
+  "why": "AMBIGUOUS: value null when R4 fails | R4 a review flag with no flagChecks entry -> automatic not usable",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "needs_review",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [
+     "low_light",
+     "partial_occlusion"
+    ],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {
+     "low_light": "ok"
+    }
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "withheld_no_manual",
+  "why": "R3 does not apply when withheld; R5 no manual -> no value, not eligible",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null
+  }
+ },
+ {
+  "id": "withheld_manual_valid",
+  "why": "R5 automatic withheld + valid manual '11' with reason -> value 11; R7 age 70 men threshold 12 -> below; evidence not required for manual",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "11",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 11,
+   "referenceEligible": true,
+   "category": "below_average"
+  }
+ },
+ {
+  "id": "no_evidence_determinate",
+  "why": "AMBIGUOUS: value null (count only in automatic range) | R4 evidence.available false -> automatic count not usable; no manual",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "evidence"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "identity_false",
+  "why": "AMBIGUOUS: value null when R4 fails | R4 identityConfirmed must be true; false blocks",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": false,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "identity"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "identity_null",
+  "why": "AMBIGUOUS: value null when R4 fails | R4 identityConfirmed null (not answered) blocks",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "identity"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "uncertain_resolved_full",
+  "why": "R3 11 counted full + 1 uncertain resolved 'full' (evidence available) -> min=max=12; eligible, not below (thr 12)",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "uncertain",
+      "counted": false,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {
+     "12": "full"
+    },
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "uncertain_resolved_not_full",
+  "why": "R3 12 counted full + 1 uncertain resolved 'not_full' -> min=max=12; eligible",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 13,
+      "cls": "uncertain",
+      "counted": false,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {
+     "13": "not_full"
+    },
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "uncertain_cant_tell_straddle",
+  "why": "R3 11 full + 1 uncertain 'cant_tell' -> range 11-12; R6 11 below / 12 not below at threshold 12 -> straddles, not eligible",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "uncertain",
+      "counted": false,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {
+     "12": "cant_tell"
+    },
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "automatic": {
+    "min": 11,
+    "max": 12,
+    "determinate": false
+   }
+  }
+ },
+ {
+  "id": "range_determinate_not_below_unresolved",
+  "why": "R3 12 full + 1 uncertain unresolved -> 12-13; R6 both >= 12 -> category not_below reported, value null (shown as range)",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 13,
+      "cls": "uncertain",
+      "counted": false,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 13,
+    "determinate": false
+   }
+  }
+ },
+ {
+  "id": "range_determinate_below",
+  "why": "R3 9 full + 2 uncertain (one unresolved, one cant_tell) -> 9-11; R6 both < 12 -> below reported, value null",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "uncertain",
+      "counted": false,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "uncertain",
+      "counted": false,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {
+     "11": "cant_tell"
+    },
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": true,
+   "category": "below_average",
+   "automatic": {
+    "min": 9,
+    "max": 11,
+    "determinate": false
+   }
+  }
+ },
+ {
+  "id": "range_determinate_but_no_evidence",
+  "why": "R6 requires every other R4 condition; evidence unavailable -> no category",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 13,
+      "cls": "uncertain",
+      "counted": false,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "evidence"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 13,
+    "determinate": false
+   }
+  }
+ },
+ {
+  "id": "resolutions_ignored_without_evidence",
+  "why": "R4 resolutions count only when evidence.available; 'full' resolution ignored -> range 11-12; not eligible",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "uncertain",
+      "counted": false,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": true,
+    "eventResolutions": {
+     "12": "full"
+    },
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "evidence"
+   ],
+   "automatic": {
+    "min": 11,
+    "max": 12,
+    "determinate": false
+   }
+  }
+ },
+ {
+  "id": "challenged_full_resolved_not_full",
+  "why": "R3 counted full event 12 challenged and resolved 'not_full' with evidence -> min=max=11; 11 < 12 -> below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {
+     "12": "not_full"
+    },
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 11,
+   "referenceEligible": true,
+   "category": "below_average",
+   "automatic": {
+    "min": 11,
+    "max": 11,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "challenged_full_not_full_without_evidence",
+  "why": "R4 not_full resolution ignored without images -> range stays 12-12, but R4 fails on evidence -> no value",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {
+     "12": "not_full"
+    },
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "evidence"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "challenged_full_resolved_cant_tell",
+  "why": "AMBIGUOUS: R3 literally keeps a counted full event resolved 'cant_tell' in min (12-12, eligible). Conservative reading: it is no longer certain -> 11-12, straddles threshold 12 -> not eligible",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {
+     "12": "cant_tell"
+    },
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "automatic": {
+    "min": 11,
+    "max": 12,
+    "determinate": false
+   }
+  }
+ },
+ {
+  "id": "partial_event_not_counted",
+  "why": "R3 only counted events and uncertain-resolved-full enter min; a 'partial' event (counted false) is neither in min nor max -> 12 (see notes: CDC over-halfway rule)",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 13,
+      "cls": "partial",
+      "counted": false,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "manual_ignored_when_automatic_eligible",
+  "why": "R5 manual used only if automatic withheld or not eligible under R4; automatic 12 eligible -> value 12 even though manual says 10",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "10",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "manual_used_when_no_evidence",
+  "why": "R5 automatic basis not eligible under R4 (no images) + valid manual '11' -> value 11; below (thr 12); range still reported",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "11",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 11,
+   "referenceEligible": true,
+   "category": "below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "manual_used_when_range_straddles",
+  "why": "R5 R4 fails on min!=max (11-12 straddles) and R6 cannot apply -> manual '12' used; not below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "uncertain",
+      "counted": false,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {
+     "12": "cant_tell"
+    },
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "12",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 11,
+    "max": 12,
+    "determinate": false
+   }
+  }
+ },
+ {
+  "id": "manual_with_range_determinate",
+  "why": "AMBIGUOUS: range 12-13 is R6-determinate, but R4 (min==max) fails so R5 literally uses manual '13'; category not_below either way; chose value 13",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 13,
+      "cls": "uncertain",
+      "counted": false,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "13",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 13,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 13,
+    "determinate": false
+   }
+  }
+ },
+ {
+  "id": "manual_rejected_when_stopped",
+  "why": "R2/R5 manual allowed only for completed_30s; stopped -> value null",
+  "session": {
+   "result": {
+    "reason": "stopped",
+    "status": "stopped",
+    "window": {
+     "observedMs": 25000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "12",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "stopped_early",
+   "value": null,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "30"
+   ]
+  }
+ },
+ {
+  "id": "manual_invalid_decimal",
+  "why": "R5 '12.0' fails ^\\d{1,2}$ -> invalid, no value",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "12.0",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null
+  }
+ },
+ {
+  "id": "manual_invalid_exponent",
+  "why": "R5 '1e1' fails ^\\d{1,2}$ -> invalid, no value",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "1e1",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null
+  }
+ },
+ {
+  "id": "manual_invalid_negative",
+  "why": "R5 '-3' fails ^\\d{1,2}$ -> invalid, no value",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "-3",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null
+  }
+ },
+ {
+  "id": "manual_invalid_spaces",
+  "why": "R5 ' 7 ' has spaces; regex has none -> invalid (no trimming)",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": " 7 ",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null
+  }
+ },
+ {
+  "id": "manual_invalid_empty",
+  "why": "R5 empty string -> invalid, no value",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null
+  }
+ },
+ {
+  "id": "manual_invalid_61",
+  "why": "R5 61 matches regex but exceeds 0-60 -> invalid, no value",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "61",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null
+  }
+ },
+ {
+  "id": "manual_valid_60",
+  "why": "R5 '60' is the upper bound of 0-60 -> valid; withheld -> value 60; not below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "60",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 60,
+   "referenceEligible": true,
+   "category": "not_below_average"
+  }
+ },
+ {
+  "id": "manual_valid_leading_zero",
+  "why": "R5 NOTE: '07' matches ^\\d{1,2}$ -> 7 (spec permits leading zero); 7 < 12 -> below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "07",
+    "reason": "supervisor counted aloud during test"
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 7,
+   "referenceEligible": true,
+   "category": "below_average"
+  }
+ },
+ {
+  "id": "manual_missing_reason",
+  "why": "R5 requires a non-empty reason; '' -> invalid, no value",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "11",
+    "reason": ""
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null
+  }
+ },
+ {
+  "id": "manual_whitespace_reason",
+  "why": "AMBIGUOUS: R5 'non-empty reason' - whitespace-only reason treated as empty -> invalid, no value",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "withheld",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": false,
+    "identityConfirmed": null,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": {
+    "text": "11",
+    "reason": "   "
+   },
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": null,
+   "referenceEligible": false,
+   "category": null
+  }
+ },
+ {
+  "id": "replay_source_never_compared",
+  "why": "R7 source must be camera; replay with full evidence still not eligible; R4 holds so value 12",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "replay",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "replay"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "setup_no",
+  "why": "R7 observer.setup must be 'yes'",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "no"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "setup"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "arms_unsure",
+  "why": "R7 arms 'unsure' blocks completed_30s comparison",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "unsure",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "arm"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "arms_null_setup_null",
+  "why": "R7 arms null and setup null both block; both blockers listed (R8)",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": null,
+    "setup": null
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "arm",
+    "setup"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "age_59",
+  "why": "R7 age 59 < 60, no CDC row, no extrapolation",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "59",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "age"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "age_95",
+  "why": "R7 age 95 > 94, no CDC row, no extrapolation",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "95",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "age"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "age_decimal",
+  "why": "R7 '70.5' fails ^\\d{1,3}$",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70.5",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "age"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "age_non_numeric",
+  "why": "R7 'abc' fails ^\\d{1,3}$",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "abc",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "age"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "age_empty",
+  "why": "R7 empty age fails ^\\d{1,3}$",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "mustIncludeBlockerKeywords": [
+    "age"
+   ],
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "age_leading_zero_070",
+  "why": "R7 NOTE: '070' matches ^\\d{1,3}$ -> 70 -> row 70-74 men threshold 12 -> 12 not below (spec permits leading zero)",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "070",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "column_blank",
+  "why": "R7 column must be men or women; '' blocks",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": ""
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "column_other",
+  "why": "R7 column 'other' is not men/women -> blocks",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "other"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": false,
+   "category": null,
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "cdc_age60_men_13_below",
+  "why": "R7 + CDC table row 60-64 men '< 14': count 13 -> below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 13,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "60",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 13,
+   "referenceEligible": true,
+   "category": "below_average",
+   "automatic": {
+    "min": 13,
+    "max": 13,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "cdc_age60_men_14_not_below",
+  "why": "R7 + CDC table row 60-64 men '< 14': count 14 -> not below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 13,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 14,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "60",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 14,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 14,
+    "max": 14,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "cdc_age94_women_3_below",
+  "why": "R7 + CDC table row 90-94 women '< 4': count 3 -> below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "94",
+    "column": "women"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 3,
+   "referenceEligible": true,
+   "category": "below_average",
+   "automatic": {
+    "min": 3,
+    "max": 3,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "cdc_age94_women_4_not_below",
+  "why": "R7 + CDC table row 90-94 women '< 4': count 4 -> not below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "94",
+    "column": "women"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 4,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 4,
+    "max": 4,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "cdc_age67_men_11_below",
+  "why": "R7 + CDC table row 65-69 men '< 12': count 11 -> below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "67",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 11,
+   "referenceEligible": true,
+   "category": "below_average",
+   "automatic": {
+    "min": 11,
+    "max": 11,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "cdc_age67_men_12_not_below",
+  "why": "R7 + CDC table row 65-69 men '< 12': count 12 -> not below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "67",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "cdc_age92_women_3_below",
+  "why": "R7 + CDC table row 90-94 women '< 4': count 3 -> below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "92",
+    "column": "women"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 3,
+   "referenceEligible": true,
+   "category": "below_average",
+   "automatic": {
+    "min": 3,
+    "max": 3,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "cdc_age92_women_4_not_below",
+  "why": "R7 + CDC table row 90-94 women '< 4': count 4 -> not below",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "calibrated"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "92",
+    "column": "women"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 4,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 4,
+    "max": 4,
+    "determinate": true
+   }
+  }
+ },
+ {
+  "id": "practice_stand_skipped",
+  "why": "Spec defines no rule on practiceStand; literal reading: 'skipped' does not block (see notes)",
+  "session": {
+   "result": {
+    "reason": "expired",
+    "status": "measured",
+    "window": {
+     "observedMs": 30000
+    },
+    "events": [
+     {
+      "n": 1,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 2,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 3,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 4,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 5,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 6,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 7,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 8,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 9,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 10,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 11,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     },
+     {
+      "n": 12,
+      "cls": "full",
+      "counted": true,
+      "flags": []
+     }
+    ],
+    "reviewFlags": [],
+    "practiceStand": "skipped"
+   },
+   "source": "camera",
+   "observer": {
+    "arms": "no",
+    "setup": "yes"
+   },
+   "evidence": {
+    "available": true,
+    "identityConfirmed": true,
+    "eventResolutions": {},
+    "flagChecks": {}
+   },
+   "manual": null,
+   "participant": {
+    "ageText": "70",
+    "column": "men"
+   }
+  },
+  "expect": {
+   "completion": "completed_30s",
+   "value": 12,
+   "referenceEligible": true,
+   "category": "not_below_average",
+   "automatic": {
+    "min": 12,
+    "max": 12,
+    "determinate": true
+   }
+  }
+ }
+]

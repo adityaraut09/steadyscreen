@@ -1,0 +1,22 @@
+{
+  "name": "steadyscreen-univabio",
+  "private": true,
+  "version": "0.3.0",
+  "description": "Assessor-supervised 30-Second Chair Stand measurement assistant (UnivaBio 2026 hackathon prototype)",
+  "type": "module",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "challenge": "node eval/challenge.mjs",
+    "eval:real": "node eval/eval_real.mjs",
+    "serve": "python3 -m http.server 8932 --bind 127.0.0.1 --directory app",
+    "journeys": "node eval/browser/journey_demo.mjs && node eval/browser/journey_cp4.mjs && node eval/browser/journey_overnight.mjs",
+    "serve:repo": "python3 -m http.server 8933 --bind 127.0.0.1"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.12.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
